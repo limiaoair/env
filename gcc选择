@@ -1,0 +1,20 @@
+gcc选择版本优先级
+# 由于ubuntu20.04默认的gcc版本是9.3.0，tensorflow官方支持最高目前是7.3.1具体支持详情在https://tensorflow.google.cn/install/source#linux
+安装gcc7.3.0，此方法可以在多版本gcc时按照需要进行选择，或者默认优先级
+1（可选，不推荐，仅供下载包用，建议直接第二步）.下载gcc包到自定义文件夹（一般替换在〜/下载），替换清华镜像源gcc地址 
+  https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-7.3.0/  # 选择gcc-7.3.0.tar.gz文件下载
+2.首先查看现有gcc版本：
+  $ gcc -V
+3.安装所需要的gcc,终端运行：
+  $ sudo apt install software-properties-common
+  $ sudo add-repository ppa:ubuntu-toolchain-r/test
+  $ sudo apt install gcc-7 g++-7 gcc-6 g++-6  # 需要什么版本的gcc就在后面添加“gcc-* g++-*”
+4（可选）. 查看已安装gcc版本：
+  $ ls /usr/bin/gcc*
+5.查看可选择gcc版本，并选择需要的版本：
+  $ sudo update-alternatives --config gcc # 显示gcc已有版本，根据提示选择所需要版本
+6.设置gcc版本优先级（固定版本一劳永逸）：
+  $ sudo update-alternatives --install /usr/bin/gcc  gcc /usr/bin/gcc-7 100 #设置gcc-7的优先级数为“100“
+  $ sudo update-alternatives --install /usr/bin/gcc  gcc /usr/bin/gcc-9 80 #设置gcc-7的优先级数为“180“
+  # 优先级数字月大，则优先级越高
+7.END

@@ -15,6 +15,6 @@ gcc选择版本优先级
   $ sudo update-alternatives --config gcc # 显示gcc已有版本，根据提示选择所需要版本
 6.设置gcc版本优先级（固定版本一劳永逸）：
   $ sudo update-alternatives --install /usr/bin/gcc  gcc /usr/bin/gcc-7 100 #设置gcc-7的优先级数为“100“
-  $ sudo update-alternatives --install /usr/bin/gcc  gcc /usr/bin/gcc-9 80 #设置gcc-7的优先级数为“180“
+  $ sudo update-alternatives --install /usr/bin/gcc  gcc /usr/bin/gcc-9 80 #设置gcc-7的优先级数为“80“
   # 优先级数字月大，则优先级越高
 7.END

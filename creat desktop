@@ -1,0 +1,15 @@
+ubuntu创建桌面图标
+
+创建  namexx.desktop文件，内容如下：
+        [Desktop Entry]
+        Name=图标的名字
+        Exec=/home/limiao/应用程序.AppImage
+        Icon=/home/limiao/应用图片.png
+        Type=Application
+        StartupNotify=true
+
+添加执行权限：
+$ sudo chmod +x namexx.desktop
+
+添加桌面图标：
+$ sudo cp namexx.desktop /usr/share/applications

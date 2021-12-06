@@ -4,3 +4,11 @@
 
 # 取消镜像
 $ pip config unset global.index-url
+
+
+无法解析主机：
+$ sudo gedit /etc/resolv.conf
+添加：
+    nameserver 8.8.8.8
+    nameserver 8.8.4.4
+

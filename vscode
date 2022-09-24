@@ -1,0 +1,11 @@
+问题描述：
+  最近新学期新任务，我在新建conda虚拟环境的时候，发现自己的anaconda不能直接python3.8版本以上，原因是因为Aanaconda版本过低，需要升级。
+  尝试过终端升级和客户端升级，均失败，遂放大招--卸载重装
+  卸载后，重新安装anaconda
+  最后不知什么原因导致vs code上不能自动进入从虚拟环境
+  
+解决方式：
+  更改vccode的终端打开方式，转换成cmd
+  1、Ctrl + Shift + p
+  2、输入：terminal:select default profile
+  3、选择：cmd

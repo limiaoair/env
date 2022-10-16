@@ -9,3 +9,5 @@
   1、Ctrl + Shift + p
   2、输入：terminal:select default profile
   3、选择：cmd
+
+nohup python 自己的demo.py > ./自己的log文件路径 2>&1 &

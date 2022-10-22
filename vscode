@@ -11,3 +11,9 @@
   3、选择：cmd
 
 nohup python 自己的demo.py > ./自己的log文件路径 2>&1 &
+
+1、RuntimeError: Error(s) in loading state_dict for
+  更改属性：
+  model.load_state_dict(checkpoint['state_dict'], strict=False)
+  当strict=True,要求预训练权重层数的键值与新构建的模型中的权重层数名称完全吻合；如果新构建的模型在层数上进行了部分微调，则上述代码就会报错：说key对应不上
+  

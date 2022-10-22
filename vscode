@@ -11,7 +11,6 @@
   3、选择：cmd
 
 nohup python 自己的demo.py > ./自己的log文件路径 2>&1 &
-
 1、RuntimeError: Error(s) in loading state_dict for
   更改属性：
   model.load_state_dict(checkpoint['state_dict'], strict=False)

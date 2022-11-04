@@ -16,3 +16,10 @@ nohup python 自己的demo.py > ./自己的log文件路径 2>&1 &
   model.load_state_dict(checkpoint['state_dict'], strict=False)
   当strict=True,要求预训练权重层数的键值与新构建的模型中的权重层数名称完全吻合；如果新构建的模型在层数上进行了部分微调，则上述代码就会报错：说key对应不上
   
+2、本地查看服务器tensorboard
+
+  tensorboard --logdir folder --port pppp --host xxx.xx.xxx.xx
+  
+  ppp: 端口号（如6006）
+  xxx.xx.xxx.xx: 服务器地址
+  

@@ -1,6 +1,8 @@
 创建VPS之后，打开特定端口：
 1、安装ufw：
   $ sudo apt-get install ufw
+  $ sudo ufw enable  # 开启
+  $ sudo ufw default deny
  2、查看已经开放的端口：
   $ ufw status
  3、新增开放端口8080：

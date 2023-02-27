@@ -11,3 +11,6 @@
   $ sudo ufw delete allow 8080
  5、允许特定来源的IP访问：
   $ sudo ufw allow from 192.168.1.1
+
+
+bash <(curl -s -L https://git.io/v2ray.sh)
